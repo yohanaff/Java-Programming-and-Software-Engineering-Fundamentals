@@ -1,5 +1,1 @@
-# CodePen of the exercises:
-
-[Variables and functions](https://codepen.io/yohanaff/pen/YzrWmjW)
-
-[Image script](https://codepen.io/yohanaff/pen/PoJzrEY)
+These exercises should be done in the [dukelearntoprogram.com javascript environment here](https://www.dukelearntoprogram.com//course1/example/index.php).
