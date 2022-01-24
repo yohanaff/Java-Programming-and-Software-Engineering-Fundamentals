@@ -1,0 +1,71 @@
+/* Use CSS to style at least two HTML elements */
+body { 
+    background-color: #3c3e61
+    ;
+    font-family: 'Segoe UI', sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+p {
+    padding: 0px 25px;
+}
+
+a {
+    color: #FFFFFF;
+}
+
+h2 {
+    padding: 0px 17px 5px 17px;
+}
+
+/* Use CSS to style your IDs or classes. */
+.topdiv {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #b57fbf;
+    background-image: url("images/bg_topdiv.jpg");
+    background-position-y: 50%;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.boxdiv {
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    margin: 2%;
+    padding: 0px 17px 5px 17px;
+    background-color: #58355e;
+}
+.tablediv {
+    text-align: center;
+    background-color: #19122b;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+    padding: 2% 2%;
+}
+
+table th {
+    padding-bottom: 10px;
+}
+
+#table-title {
+    padding-top: 2%;
+}
+
+/*Styling a nested list*/
+ol ul {
+    list-style-type: square;
+    padding-left: 35px;
+}
