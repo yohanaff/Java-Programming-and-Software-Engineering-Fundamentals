@@ -277,3 +277,58 @@ print(image);
 //Programming Exercise: Advanced Modifying Images
 
 //Part 1 
+
+//*---------------------------------------------------------------*//
+
+//Codes that helped me solve the quizzes
+
+/* Consider the function addBorder that has a parameter image and another parameter thickness. 
+This function returns image with an added black border around each side of the image that is thickness pixels wide. 
+It calls a function setBlack (which changes the color of a single pixel to black) to change the color of border pixels. */
+
+function setBlack(px) {
+    px.setRed(0);
+    px.setGreen(0);
+    px.setBlue(0);
+}
+
+function addBorder(image, thickness) {
+    var someImg = new SimpleImage(image);
+
+    for (var pixel of someImg.values()) {
+        if (pixel.getX() <= thickness || pixel.getX() >= someImg.getWidth() - thickness) {
+            setBlack(pixel);
+        }
+
+        if (pixel.getY() <= thickness || pixel.getY() >= someImg.getHeight() - thickness) {
+            setBlack(pixel);
+        }
+    }
+    return someImg;
+}
+
+var picture = addBorder("smallpanda.png", 10);
+print(picture);
+
+
+/* The upper left quadrant is yellow instead of red because line 12 inside the else statement applies to all pixels with a y value 
+less than or equal to half the height of the image. The code below fixes the bug by changing the else to an if statement that checks 
+whether a pixel is in the upper right quadrant: */
+var img = new SimpleImage(200, 200);
+
+for (var px of img.values()) {
+    var x = px.getX();
+    var y = px.getY();
+
+    if (x < img.getWidth() / 2) {
+        px.setRed(255);
+    }
+    if (y > img.getHeight() / 2) {
+        px.setBlue(255);
+    }
+    if (y <= img.getHeight() / 2 && x >= img.getWidth() / 2) {
+        px.setGreen(255);
+    }
+}
+
+print(img);
