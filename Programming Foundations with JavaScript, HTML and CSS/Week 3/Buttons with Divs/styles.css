@@ -1,0 +1,21 @@
+/* Use CSS to style headers and divs in general (Color background color, font family, font size, border, padding, margin */
+
+h1 {
+    font-family: Calibri;
+}
+div {
+    width: 150px;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: solid 1px #000000;
+    padding: 10px;
+    margin: 10px;
+}
+
+#div1 {
+    background-color: #19e160;
+}
+
+#div2 {
+    background-color: #e61e9f;
+}
