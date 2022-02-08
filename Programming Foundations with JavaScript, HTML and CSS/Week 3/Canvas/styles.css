@@ -1,0 +1,27 @@
+h1 {
+  font-family: Calibri;
+}
+
+/* Specify a width and height for canvas elements */
+canvas {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  border: 1px solid lightgray;
+}
+
+.green {
+  background-color: #19e160;
+}
+
+.pink {
+  background-color: #e12919;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}

@@ -1,0 +1,33 @@
+h1 {
+    font-family: Calibri;
+}
+div {
+    width: 150px;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: solid 1px #000000;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Style the background-color of each of your divs by styling the classes in the CSS pane */
+.green {
+    background-color: #19e160;
+}
+
+.pink {
+    background-color: #e12919;
+}
+
+/* In the CSS pane, style an extra 1-2 new classes, giving the classes a new background-color you have not yet used in your Pen */
+.purple {
+    background-color: #682a95;
+}
+
+.yellow {
+    background-color: #decd0f;
+}
+
+.blacktext {
+    font-style: #000000;
+}
