@@ -7,9 +7,9 @@ ___
 
 | ⏳ [^*] | 1. Programming Foundations with JavaScript, HTML and CSS |
 |---|-------------------------------------------------------|
-| ✔️ | Week 1: Designing a Web Page with HTML and CSS: [Click here to see the final project on CodePen](https://codepen.io/yohanaff/pen/WNZwyrW) |
-| ✔️ | Week 2: Algorithms and Programming Concepts |
-| ⏳ | Week 3: JavaScript for Web Pages  |
+| ✔️ | Week 1: Designing a Web Page with HTML and CSS - [Click here to see the final project on CodePen](https://codepen.io/yohanaff/pen/WNZwyrW) |
+| ✔️ | Week 2: Algorithms and Programming Concepts - [See README inside](https://github.com/yohanaff/Java-Programming-and-Software-Engineering-Fundamentals/tree/main/Programming%20Foundations%20with%20JavaScript%2C%20HTML%20and%20CSS/Week%202) |
+| ✔️ | Week 3: JavaScript for Web Pages  |
 | 👩‍💻 | Week 4: MiniProject: Image Filters on the Web |
 
 
