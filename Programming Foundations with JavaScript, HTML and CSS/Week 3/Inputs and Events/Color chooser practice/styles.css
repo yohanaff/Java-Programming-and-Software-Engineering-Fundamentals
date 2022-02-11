@@ -1,0 +1,10 @@
+canvas {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  border: 1px solid lightgray;
+}
+
+.orange {
+  background-color: orange;;
+}
