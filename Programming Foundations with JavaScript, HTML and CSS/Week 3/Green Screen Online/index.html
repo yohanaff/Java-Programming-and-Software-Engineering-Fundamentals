@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Try It! Green Screen Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Try It! Green Screen Online</h1>
+
+    <canvas id="fg-canva"></canvas>
+    <canvas id="bg-canva"></canvas>
+
+    <p>
+        Foreground:
+        <input type="file" id="fg-file" multiple="false" accept="image/*" onchange="loadForegroundImage()">
+    </p>
+    <p>
+        Background:
+        <input type="file" id="bg-file" multiple="false" accept="image/*" onchange="loadBackgroundImage()">
+    </p>
+    <p>
+        <input type="button" value="Create composite" onclick="doGreenScreen()">
+        <input type="button" value="Clear canvases" onclick="clearCanvas()">
+    </p>
+
+    <p>
+        Try to upload the images below to test the program!
+        <p>Foreground image: <a href="https://www.dukelearntoprogram.com//course1/example/drewRobert.png">drawRobert.png</a></p>
+        <p>Background image: <a href="https://www.dukelearntoprogram.com//course1/example/dinos.png">dinos.png</a></p>
+
+    </p>
+
+<script src="script.js"></script>
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+</body>
+
+</html>
