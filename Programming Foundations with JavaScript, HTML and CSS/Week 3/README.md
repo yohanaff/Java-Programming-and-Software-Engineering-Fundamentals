@@ -1,6 +1,6 @@
 # Programming Foundations with JavaScript, HTML and CSS
 
-## Week 2: JavaScript for Web Pages
+## Week 3: JavaScript for Web Pages
 
 Down below you can see the CodePen of the exercises:
 
