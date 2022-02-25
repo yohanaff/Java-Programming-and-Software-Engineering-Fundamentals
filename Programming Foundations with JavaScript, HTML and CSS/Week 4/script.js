@@ -5,6 +5,9 @@ var grayImage;
 var redImage;
 var trigonometrySharkImage;
 var windowPane;
+var rainbow;
+var blurImage;
+var image3d;
 
 function ImageIsLoaded(image) {
   if (image == null || !image.complete()) {
@@ -43,10 +46,10 @@ function filterGray() {
     grayImage = image;
 
     for (var pixel of grayImage.values()) {
-      var avarege = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
-      pixel.setRed(avarege);
-      pixel.setGreen(avarege);
-      pixel.setBlue(avarege);
+      var average = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
+      pixel.setRed(average);
+      pixel.setGreen(average);
+      pixel.setBlue(average);
     }
     grayImage.drawTo(canva);
   }
@@ -60,16 +63,16 @@ function filterRed() {
     redImage = image;
 
     for (var pixel of redImage.values()) {
-      var avarege = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
+      var average = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
 
-      if (avarege < 128) {
-        pixel.setRed(avarege * 2);
+      if (average < 128) {
+        pixel.setRed(average * 2);
         pixel.setGreen(0);
         pixel.setBlue(0);
       } else {
         pixel.setRed(255);
-        pixel.setGreen((avarege * 2) - 255);
-        pixel.setBlue((avarege * 2) - 255);
+        pixel.setGreen((average * 2) - 255);
+        pixel.setBlue((average * 2) - 255);
 
       }
     }
@@ -162,5 +165,158 @@ function filterWindowPane() {
       }
     }
     windowPane.drawTo(canva);
+  }
+}
+
+//MiniProject Challenge
+
+function filterRainbow() {
+  if (ImageIsLoaded(image)) {
+    alert("Image not loaded");
+  } else {
+
+    rainbow = image;
+
+    h = rainbow.getHeight();
+
+    for (var pixel of rainbow.values()) {
+      var average = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
+      var y = pixel.getY();
+      var red = pixel.getRed();
+      var green = pixel.getGreen();
+      var blue = pixel.getBlue();
+
+      //Red stripe
+      if (y <= h / 7) {
+        if (average < 128) {
+          pixel.setRed(2 * average);
+          pixel.setGreen(0);
+          pixel.setBlue(0);
+        } else {
+          pixel.setRed(255);
+          pixel.setGreen((2 * average) - 255);
+          pixel.setBlue((2 * average) - 255);
+        }
+      }
+
+      //Orange stripe
+      else if (y > h / 7 && y <= 2 * h / 7) {
+        if (average < 128) {
+          pixel.setRed(2 * average);
+          pixel.setGreen(0.8 * average);
+          pixel.setBlue(0);
+        } else {
+          pixel.setRed(255);
+          pixel.setGreen((1.2 * average) - 51);
+          pixel.setBlue((2 * average) - 255);
+        }
+      }
+
+      //Yellow stripe
+      else if (y > 2 * h / 7 && y <= 3 * h / 7) {
+        if (average < 128) {
+          pixel.setRed(2 * average);
+          pixel.setGreen(2 * average);
+          pixel.setBlue(0);
+        } else {
+          pixel.setRed(255);
+          pixel.setGreen(255);
+          pixel.setBlue((2 * average) - 255);
+        }
+      }
+
+      //Green stripe
+      else if (y > 3 * h / 7 && y <= 4 * h / 7) {
+        if (average < 128) {
+          pixel.setRed(0);
+          pixel.setGreen(2 * average);
+          pixel.setBlue(0);
+        } else {
+          pixel.setRed((2 * average) - 255);
+          pixel.setGreen(255);
+          pixel.setBlue((2 * average) - 255);
+        }
+      }
+
+      //Blue stripe
+      else if (y > 4 * h / 7 && y <= 5 * h / 7) {
+        if (average < 128) {
+          pixel.setRed(0);
+          pixel.setGreen(0);
+          pixel.setBlue(2 * average);
+        } else {
+          pixel.setRed((2 * average) - 255);
+          pixel.setGreen((2 * average) - 255);
+          pixel.setBlue(255);
+        }
+      }
+
+      //Indigo stripe
+      else if (y > 5 * h / 7 && y <= 6 * h / 7) {
+        if (average < 128) {
+          pixel.setRed(0.8 * average);
+          pixel.setGreen(0);
+          pixel.setBlue(2 * average);
+        } else {
+          pixel.setRed((1.2 * average) - 51);
+          pixel.setGreen((2 * average) - 255);
+          pixel.setBlue(255);
+        }
+      }
+
+      //Violet stripe
+      else if (y > 6 * h / 7 && y <= h) {
+        if (average < 128) {
+          pixel.setRed(1.6 * average);
+          pixel.setGreen(0);
+          pixel.setBlue(1.6 * average);
+        } else {
+          pixel.setRed((0.4 * average) + 153);
+          pixel.setGreen((2 * average) - 255);
+          pixel.setBlue((0.4 * average) + 153);
+        }
+      }
+    }
+    rainbow.drawTo(canva);
+  }
+}
+
+function filterBlur() {
+  if (ImageIsLoaded(image)) {
+    alert("Image not loaded");
+  } else {
+
+    blurImage = image;
+
+    function pixelInImage(coordinate, size) {
+      if (coordinate < 0) {
+        return 0;
+      }
+      if (coordinate >= size) {
+        return size - 1;
+      }
+      return coordinate;
+    }
+
+    function getPixelNearby(image, x, y, diameter) {
+
+      var dx = Math.floor(Math.random() * diameter - diameter / 2);
+      var dy = Math.floor(Math.random() * diameter - diameter / 2);
+      var nx = pixelInImage(x + dx, image.getWidth());
+      var ny = pixelInImage(y + dy, image.getHeight());
+
+      return image.getPixel(nx, ny);
+    }
+
+    for (var pixel of blurImage.values()) {
+      var x = pixel.getX();
+      var y = pixel.getY();
+
+      if (Math.random() > 0.5) {
+        var pixel2 = getPixelNearby(blurImage, x, y, 10);
+        blurImage.setPixel(x, y, pixel2);
+      }
+    }
+    blurImage.drawTo(canva);
   }
 }

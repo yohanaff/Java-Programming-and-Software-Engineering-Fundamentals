@@ -41,6 +41,7 @@ header {
 .boxdiv {
   margin: 2%;
   padding: 0px 17px 5px 17px;
+  text-align: center;
 }
 
 canvas {
@@ -52,4 +53,8 @@ canvas {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 5px 10px #adadad
+}
+
+#demo-photo, #demo-grayscale, #demo-redscale, #demo-trigonometryshark, #demo-windowpane, #demo-rainbow, #demo-blur {
+  width: 500px;
 }

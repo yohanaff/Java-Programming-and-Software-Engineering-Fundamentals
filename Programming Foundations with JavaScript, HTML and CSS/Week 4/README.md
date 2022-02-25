@@ -2,4 +2,4 @@
 
 ## Week 4: MiniProject: Image Filters on the Web
 
-[Click here](https://codepen.io/yohanaff/pen/WNZwyrW) to see the final project on CodePen.
+[Click here](https://codepen.io/yohanaff/pen/NWwLbOY) to see the final project on CodePen.
