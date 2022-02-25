@@ -10,7 +10,7 @@ ___
 | ✔️ | Week 1: Designing a Web Page with HTML and CSS - [Click here to see the final project on CodePen](https://codepen.io/yohanaff/pen/WNZwyrW) |
 | ✔️ | Week 2: Algorithms and Programming Concepts - [See week 2 README](https://github.com/yohanaff/Java-Programming-and-Software-Engineering-Fundamentals/tree/main/Programming%20Foundations%20with%20JavaScript%2C%20HTML%20and%20CSS/Week%202) |
 | ✔️ | Week 3: JavaScript for Web Pages - [See week 3 README](https://github.com/yohanaff/Java-Programming-and-Software-Engineering-Fundamentals/tree/development/Programming%20Foundations%20with%20JavaScript%2C%20HTML%20and%20CSS/Week%203) |
-| ✔️ | Week 4: MiniProject: Image Filters on the Web |
+| ✔️ | Week 4: MiniProject: Image Filters on the Web - [See week 4 README](https://github.com/yohanaff/Java-Programming-and-Software-Engineering-Fundamentals/tree/main/Programming%20Foundations%20with%20JavaScript%2C%20HTML%20and%20CSS/Week%204) |
 
 
 | ⏳ | 2. Java Programming: Solving Problems with Software     |
