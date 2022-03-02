@@ -1,5 +1,6 @@
 var canva = document.getElementById("canva");
 var fileinput = document.getElementById("fileinput");
+var dimensions = document.getElementById("dimensions");
 var image;
 var grayImage;
 var redImage;
@@ -20,6 +21,7 @@ function ImageIsLoaded(image) {
 function upload() {
   image = new SimpleImage(fileinput);
   image.drawTo(canva);
+  dimensions.innerHTML = '';
 }
 
 function clearCanvas() {
@@ -36,6 +38,14 @@ function resetImage() {
   doClear(canva);
   image = new SimpleImage(fileinput);
   image.drawTo(canva);
+}
+
+function imageDimensions() {
+  if (ImageIsLoaded(image)) {
+    alert("Image not loaded");
+  } else {
+    dimensions.innerHTML = "Height X Width (in pixels): " + image.height + " X " + image.width;
+  }
 }
 
 function filterGray() {
