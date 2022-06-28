@@ -16,7 +16,7 @@ ___
 
 | ⏳ | 2. Java Programming: Solving Problems with Software     |
 |----|---------------------------------------------------------|
-| ⏳ | Week 1: Fundamental Java Syntax and Semantics           |
+| ✔️ | Week 1: Fundamental Java Syntax and Semantics           |
 | 👩‍💻 | Week 2: Strings in Java                                 |
 | 👩‍💻 | Week 3: CSV Files and Basic Statistics in Java          |
 | 👩‍💻 | Week 4: MiniProject: Baby Names                         |
